@@ -1,0 +1,29 @@
+! 
+%block lattice_cart
+3.0 0.0 0.0
+0.0 3.0 0.0
+0.0 0.0 3.0
+%endblock lattice_cart
+!
+! Atomic co-ordinates for each species.
+! These are in fractional co-ordinates wrt to the cell.
+!
+%block positions_abs
+Fe 0.0 0.0 0.0
+Fe 1.5 1.5 1.5
+%endblock positions_abs
+!
+! Analyse structure to determine symmetry
+!
+symmetry_generate
+!
+! Choose which pseudopotentials to use
+! Either specify external files, or omit to generate a pseudopotential
+!
+!%block species_pot
+!Fe Fe_00.usp
+!%endblock species_pot
+!
+! Specify M-P grid dimensions for electron wavevectors (K-points)
+!
+kpoint_mp_grid 8 8 8

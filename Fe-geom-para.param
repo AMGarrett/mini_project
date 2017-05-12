@@ -1,0 +1,7 @@
+task		geometryoptimisation ! The TASK keyword instructs CASTEP what to do
+xc_functional    PBE           ! Which exchange-correlation functional to use.
+cut_off_energy   1000 eV	       ! Choose plane-wave cut off energy
+fix_occupancy    false         ! Treat the system as an metal 
+opt_strategy     speed         ! Choose algorithms for best speed at expense of memory.
+num_dump_cycles  0             ! Don't write unwanted ".wvfn" files.
+nextra_bands     14
