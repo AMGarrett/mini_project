@@ -1,0 +1,10 @@
+task		GEOMETRYOPTIMIZATION          ! The TASK keyword instructs CASTEP what to do
+xc_functional   PBE           ! Which exchange-correlation functional to use.
+cutoff_energy   900 eV        ! Choose 900 eV energy cutoff for the plane wave basis set
+opt_strategy    speed         ! Choose algorithms for best speed at expense of memory.
+num_dump_cycles 0             ! Don't write unwanted ".wvfn" files.
+fix_occupancy   false
+nextra_bands    14
+spin            0.2
+spin_polarized  true
+max_scf_cycles  50

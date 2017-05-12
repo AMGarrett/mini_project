@@ -1,0 +1,27 @@
+%BLOCK LATTICE_CART
+       3.0 0.0 0.0
+       0.0 3.0 0.0
+       0.0 0.0 3.0
+%ENDBLOCK LATTICE_CART			
+
+%BLOCK POSITIONS_FRAC      
+ Fe   0.00   0.00   0.00 spin=0.1
+ Fe   0.50   0.50   0.50 spin=0.1
+
+%ENDBLOCK POSITIONS_FRAC
+
+kpoints_mp_grid: 6 6 6
+
+symmetry_generate
+
+%block bs_kpoint_path
+0.500 0.500 0.000
+0.000 0.000 0.000
+0.500 0.500 0.500
+0.000 0.500 0.000
+0.000 0.000 0.000
+%endblock bs_kpoint_path
+
+%block species_pot
+Fe Fe_00.recpot
+%endblock species_pot
